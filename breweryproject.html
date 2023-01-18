@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Brewery Packaging Analysis</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Brewery Production Data Analysis</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">This is Massively</a></li>
+							<li class="active"><a href="generic.html">Generic Page</a></li>
+							<li><a href="elements.html">Elements Reference</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date"></span>
+									<h1>Analyzing Brewery Production Data<br />
+									In Python and Power BI</h1>
+									<p>This project was an analysis of primarily packaging data for a large scale production craft brewery in the US. It sourced user entered data from Packaging Operators upon completion of each packaging run. This data was then transfomed and analyzed to provide insight on throughput capability, product popularity and volume loss based on different brands and product type. Months were separated by different tabs on the sheet with a monthly total table at the bottom and an additional yearly total tab.<br /><br />
+                                    Brand names and other identifying information has been changed to protect anonymity.</p>
+								</header>
+                                <h3>Initial Data Source</h3>
+								<div class="image main"><img src="images/raw_data.png" alt="" /></div>
+								<p>Each packaging run comprised a row in an Excel spreadsheet. The packaging operator was tasked with entering the number of units packaged in each corresponding row, each row being a different type of packaging.</p>
+                                
+                                <h3>Concatenate Month Tabs into Master Dataset</h3>
+								<div><a href="Packaging_Data_Cleaning.html" class="image main"><img src="images/brewery_code1.png" alt="" /></a></div>
+								<p>Initial Excel file was read into Python DataFrame. Month tabs were concatenated and non-needed rows eliminated.</p>
+								<ul class="actions special">
+									<li><a href="Packaging_Data_Cleaning.html" class="button large">View Full Code</a></li>
+								</ul>
+                                <h3>Transforming Data in Power BI</h3>
+								<div class="image main"><img src="images/prun_lookup_table.png" alt="" /></div>
+								<p>Raw source data was imported to Power BI where packaging information was split into two tables. Packaging Run Lookup table corresponded to each run, regardless of different Product types packaged, maintaining information about each run including Brand, Packaging Tank, Carbonation Level, Volume packaged and Volume Loss during the run.</p>
+                                <div class="image main"><img src="images/pack_lookup_table.png" alt="" /></div>
+								<p>The second table contained each Product itemized by Product Key, Units Packaged and Package Volume per line item.</p>
+                                                                <h3>Relational Tables Created</h3>
+								<div class="image main"><img src="images/table_relations.png" alt="" /></div>
+								<p>Additional related tables created to identify Brand specific information, Product Category and Sub-Category and a calendar for date-related analysis.</p>
+                                                                                        <h3>Dashboard Creation In Power BI</h3>
+								<div class="image main"><img src="images/dashboard1.png" alt="" /></div>
+ 								<div class="image main"><img src="images/dashboard2.png" alt="" /></div>
+ 								<div class="image main"><img src="images/dashboard3.png" alt="" /></div>
+								<p>Dashboards were created to analyze and display summary information about Packaging, Brand specific information, and effects of different factors on Beer Loss.</p>        
+                        </section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
